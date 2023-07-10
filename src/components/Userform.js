@@ -35,7 +35,7 @@ export default function Userform() {
         if (imageSrc1 === './female.png') {
             setImageSrc1('./activefemale.png');
             setImageSrc('./man1.png');
-            setGenderActive1(!isGenderActive1);
+            setGenderActive1(!isGenderActive);
         } else {
             setImageSrc1('./female.png');
             setImageSrc('./activemale.png')
