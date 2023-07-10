@@ -27,7 +27,7 @@ export default function Userform() {
             setGenderActive(!isGenderActive);
         } else {
             setImageSrc('./man1.png');
-            setImageSrc1('./activefemale.png')
+            // setImageSrc1('./activefemale.png')
         }
     }
 
@@ -38,7 +38,7 @@ export default function Userform() {
             setGenderActive1(!isGenderActive);
         } else {
             setImageSrc1('./female.png');
-            setImageSrc('./activemale.png')
+            // setImageSrc('./activemale.png')
         }
     }
     return (
