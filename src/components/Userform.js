@@ -3,6 +3,11 @@ import React, { useState } from 'react'
 export default function Userform() {
     const [imageSrc, setImageSrc] = useState('./man1.png');
     const [imageSrc1, setImageSrc1] = useState('./female.png');
+    const [isGenderActive, setGenderActive] = useState(false);
+
+    // const handleGenderClick = () => {
+    //     setGenderActive(!isGenderActive);
+    // };
 
     let mystyle = {
         margin: "5px",
@@ -17,7 +22,8 @@ export default function Userform() {
     const changeImageSrc = () => {
         if (imageSrc === './man1.png') {
             setImageSrc('./activemale.png');
-            setImageSrc1('./female.png')
+            setImageSrc1('./female.png');
+            setGenderActive(!isGenderActive);
         } else {
             setImageSrc('./man1.png');
             setImageSrc1('./activefemale.png')
@@ -27,7 +33,8 @@ export default function Userform() {
     const changeImageSrc1 = () => {
         if (imageSrc1 === './female.png') {
             setImageSrc1('./activefemale.png');
-            setImageSrc('./man1.png')
+            setImageSrc('./man1.png');
+            setGenderActive(!isGenderActive);
         } else {
             setImageSrc1('./female.png');
             setImageSrc('./activemale.png')
@@ -35,10 +42,10 @@ export default function Userform() {
     }
     return (
         <>
-            <div className="ocean">
+            {/* <div className="ocean">
                 <div className="wave"></div>
                 <div className="wave"></div>
-            </div>
+            </div> */}
             <div className="my-4 container ocean">
                 <div className="container card center shadow p-3 mb-5 bg-body rounded cardstyle">
                     <form className="g-3 needs-validation">
@@ -70,10 +77,10 @@ export default function Userform() {
                                     <div className="button-cover">
                                         <div className="button b2" id="button-10">
                                             <div className="knobs">
-                                                <button className="btn waves-effect" style={mystyle} data-mdb-ripple-color="primary" onClick={changeImageSrc}>
+                                                <button className={`gender-button ${isGenderActive ? 'active' : ''}`} style={mystyle} data-mdb-ripple-color="primary" onClick={changeImageSrc}>
                                                     <img src={imageSrc} alt="" style={{ height: "45px" }} />
                                                 </button>
-                                                <button className="btn waves-effect waves-red" style={mystyle1} data-mdb-ripple-color="danger" onClick={changeImageSrc1}>
+                                                <button className={`gender-button ${isGenderActive ? 'active' : ''}`} style={mystyle1} data-mdb-ripple-color="danger" onClick={changeImageSrc1}>
                                                     <img data-mdb-ripple-color="danger" src={imageSrc1} alt="" style={{ height: "45px" }} />
                                                 </button>
                                             </div>
