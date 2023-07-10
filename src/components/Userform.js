@@ -4,6 +4,7 @@ export default function Userform() {
     const [imageSrc, setImageSrc] = useState('./man1.png');
     const [imageSrc1, setImageSrc1] = useState('./female.png');
     const [isGenderActive, setGenderActive] = useState(false);
+    const [isGenderActive1, setGenderActive1] = useState(false);
 
     // const handleGenderClick = () => {
     //     setGenderActive(!isGenderActive);
@@ -34,7 +35,7 @@ export default function Userform() {
         if (imageSrc1 === './female.png') {
             setImageSrc1('./activefemale.png');
             setImageSrc('./man1.png');
-            setGenderActive(!isGenderActive);
+            setGenderActive1(!isGenderActive1);
         } else {
             setImageSrc1('./female.png');
             setImageSrc('./activemale.png')
@@ -80,7 +81,7 @@ export default function Userform() {
                                                 <button className={`gender-button ${isGenderActive ? 'active' : ''}`} style={mystyle} data-mdb-ripple-color="primary" onClick={changeImageSrc}>
                                                     <img src={imageSrc} alt="" style={{ height: "45px" }} />
                                                 </button>
-                                                <button className={`gender-button ${isGenderActive ? 'active' : ''}`} style={mystyle1} data-mdb-ripple-color="danger" onClick={changeImageSrc1}>
+                                                <button className={`gender-button ${isGenderActive1 ? 'active' : ''}`} style={mystyle1} data-mdb-ripple-color="danger" onClick={changeImageSrc1}>
                                                     <img data-mdb-ripple-color="danger" src={imageSrc1} alt="" style={{ height: "45px" }} />
                                                 </button>
                                             </div>
