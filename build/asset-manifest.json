@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ottonova/static/css/main.1d758e81.css",
-    "main.js": "/Ottonova/static/js/main.ef3c229e.js",
+    "main.css": "/Ottonova/static/css/main.fb7b0dbf.css",
+    "main.js": "/Ottonova/static/js/main.8311a1e9.js",
     "static/js/787.66f0be33.chunk.js": "/Ottonova/static/js/787.66f0be33.chunk.js",
     "index.html": "/Ottonova/index.html",
-    "main.1d758e81.css.map": "/Ottonova/static/css/main.1d758e81.css.map",
-    "main.ef3c229e.js.map": "/Ottonova/static/js/main.ef3c229e.js.map",
+    "main.fb7b0dbf.css.map": "/Ottonova/static/css/main.fb7b0dbf.css.map",
+    "main.8311a1e9.js.map": "/Ottonova/static/js/main.8311a1e9.js.map",
     "787.66f0be33.chunk.js.map": "/Ottonova/static/js/787.66f0be33.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d758e81.css",
-    "static/js/main.ef3c229e.js"
+    "static/css/main.fb7b0dbf.css",
+    "static/js/main.8311a1e9.js"
   ]
 }
