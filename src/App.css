@@ -126,22 +126,15 @@
 }
 
 /* wave animation */
-    @keyframes wave {
-        0% {
-        transform: rotate(0deg);
-        }
-        50% {
-        transform: rotate(10deg);
-        }
-        100% {
-        transform: rotate(0deg);
-        }
-    }
-    
-    .gender-button {
-        /* Add your existing button styles here */
-    }
-    
-    .gender-button.active {
-        animation: wave 0.5s ease-in-out;
-    }
+.gender-button {
+    position: relative;
+    /* Add other styles for the button */
+}
+
+.wave-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add your wave animation styles here */
+}

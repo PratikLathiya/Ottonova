@@ -118,20 +118,18 @@ export default function Userform() {
                             <button
                                 className={`gender-button ${gender === 'male' ? 'active' : ''}`}
                                 onClick={() => handleGenderSelection('male')}
-                                style={{
-                                    backgroundImage: `url(${gender === 'male' ? 'activemale.png' : 'male.png'})`,
-                                    backgroundColor: gender === 'male' ? 'rgb(218 225 231)' : ''
-                                }}
-                            ></button>
+                            >
+                                <div className="wave-animation"></div>
+                                <img src={gender === 'male' ? './activemale.png' : './male.png'} alt="Male" />
+                            </button>
 
                             <button
                                 className={`gender-button ${gender === 'female' ? 'active' : ''}`}
                                 onClick={() => handleGenderSelection('female')}
-                                style={{
-                                    backgroundImage: `url(${gender === 'female' ? 'avtivefemale.png' : 'female.png'})`,
-                                    backgroundColor: gender === 'female' ? '#e9dde1' : ''
-                                }}
-                            ></button>
+                            >
+                                <div className="wave-animation"></div>
+                                <img src={gender === 'female' ? './activefemale.png' : './female.png'} alt="Female" />
+                            </button>
                         </div>
                         <div className="col-12 my-3">
                             <button className="btn btn-primary" type="submit">Submit</button>
