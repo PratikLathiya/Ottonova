@@ -69,21 +69,29 @@ export default function Userform() {
                                 <div className="button-cover">
                                     <div className="button b2" id="button-10">
                                         <div className="knobs">
-                                            <button
-                                                className={`gender-button ${gender === 'male' ? 'active male' : ''}`}
-                                                onClick={() => handleGenderSelection('male')}
-                                            >
-                                                <div className="wave-animation"></div>
-                                                <img src={gender === 'male' ? 'activemale.png' : 'male.png'} alt="Male" />
-                                            </button>
+                                        <button
+  className={`gender-button ${gender === 'male' ? 'active male' : ''}`}
+  onClick={() => handleGenderSelection('male')}
+>
+  {gender === 'male' ? (
+    <img src="activemale.png" alt="Male" />
+  ) : (
+    <img src="male.png" alt="Male" />
+  )}
+  <div className="wave-animation"></div>
+</button>
 
-                                            <button
-                                                className={`gender-button ${gender === 'female' ? 'active female' : ''}`}
-                                                onClick={() => handleGenderSelection('female')}
-                                            >
-                                                <div className="wave-animation"></div>
-                                                <img src={gender === 'female' ? 'activefemale.png' : 'female.png'} alt="Female" />
-                                            </button>
+<button
+  className={`gender-button ${gender === 'female' ? 'active female' : ''}`}
+  onClick={() => handleGenderSelection('female')}
+>
+  {gender === 'female' ? (
+    <img src="activefemale.png" alt="Female" />
+  ) : (
+    <img src="female.png" alt="Female" />
+  )}
+  <div className="wave-animation"></div>
+</button>
                                         </div>
                                         <div className="layer"></div>
                                     </div>
