@@ -9,7 +9,6 @@
 .button-cover {
     height: 80px;
     width: 160px;
-    /* margin: 20px; */
     margin: 10px;
     background-color: #fff;
     box-shadow: 0 10px 14px 0px #c5d6d6;
@@ -38,11 +37,8 @@
 
 .button {
     position: relative;
-    /* top: 50%; */
     top: 30%;
-    /* width: 74px; */
     width: 156px;
-    /* height: 36px; */
     height: 80px;
     margin: -16px auto 0 auto;
     overflow: hidden;
@@ -74,7 +70,6 @@
 
 .layer {
     width: 100%;
-    /* background-color: #ebf7fc; */
     transition: 0.3s ease all;
     z-index: 1;
 }
@@ -168,7 +163,6 @@
     width: 100%;
     height: 100%;
     background-color: #b0b0e7;
-    /* border-radius: 50%; */
     animation: waveAnimation 1s linear;
 }
 .gender-button.active.female .wave-animation {
@@ -179,14 +173,13 @@
     width: 100%;
     height: 100%;
     background-color: #f58ba0;
-    /* border-radius: 50%; */
     animation: waveAnimation 1s linear;
 }
 
 .gender-button.active.female .wave-animation {
-    background-color: #0f0f0f5d;
+    background-color: #0f0f0f4b;
 }
 
 .gender-button.active.male .wave-animation {
-    background-color: #b0b0e763;
+    background-color: #b0b0e75d;
 }
