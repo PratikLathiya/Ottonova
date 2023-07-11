@@ -1,5 +1,4 @@
-.toggle-button-cover
-{
+.toggle-button-cover {
     display: table-cell;
     position: relative;
     width: 200px;
@@ -7,8 +6,7 @@
     box-sizing: border-box;
 }
 
-.button-cover
-{
+.button-cover {
     height: 80px;
     width: 160px;
     /* margin: 20px; */
@@ -18,8 +16,7 @@
     border-radius: 4px;
 }
 
-.button-cover:before
-{
+.button-cover:before {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -29,8 +26,9 @@
     padding: 5px;
 }
 
-.button-cover, .knobs, .layer
-{
+.button-cover,
+.knobs,
+.layer {
     position: absolute;
     top: 0;
     right: 0;
@@ -38,8 +36,7 @@
     left: 0;
 }
 
-.button
-{
+.button {
     position: relative;
     /* top: 50%; */
     top: 30%;
@@ -51,18 +48,16 @@
     overflow: hidden;
 }
 
-.button.r, .button.r .layer
-{
+.button.r,
+.button.r .layer {
     border-radius: 100px;
 }
 
-.button.b2
-{
+.button.b2 {
     border-radius: 2px;
 }
 
-.checkbox
-{
+.checkbox {
     position: relative;
     width: 100%;
     height: 100%;
@@ -73,21 +68,20 @@
     z-index: 3;
 }
 
-.knobs
-{
+.knobs {
     z-index: 2;
 }
 
-.layer
-{
+.layer {
     width: 100%;
     /* background-color: #ebf7fc; */
     transition: 0.3s ease all;
     z-index: 1;
 }
 
-#button-10 .knobs:before, #button-10 .knobs:after, #button-10 .knobs span
-{
+#button-10 .knobs:before,
+#button-10 .knobs:after,
+#button-10 .knobs span {
     position: absolute;
     top: 4px;
     width: 75px;
@@ -101,40 +95,87 @@
     transition: 0.3s ease all;
 }
 
-#button-10 .knobs span
-{
+#button-10 .knobs span {
     display: inline-block;
     left: 4px;
     color: #fff;
     z-index: 1;
 }
 
-#button-10 .checkbox:checked + .knobs span
-{
+#button-10 .checkbox:checked+.knobs span {
     color: #4e4e4e;
 }
 
-#button-10 .checkbox:checked + .knobs:before
-{
+#button-10 .checkbox:checked+.knobs:before {
     left: 42px;
     background-color: #F44336;
 }
 
-#button-10 .checkbox:checked + .knobs:after
-{
+#button-10 .checkbox:checked+.knobs:after {
     color: #fff;
 }
 
-/* wave animation */
-.gender-button {
-    position: relative;
-    /* Add other styles for the button */
+@keyframes waveAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
-.wave-animation {
+.gender-button {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 6px;
+}
+
+.gender-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gender-button.active.male {
+    background-color: blue;
+}
+
+.gender-button.active.female {
+    background-color: pink;
+}
+
+.gender-button.active .wave-animation {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Add your wave animation styles here */
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 50%;
+    animation: waveAnimation 1s linear;
+}
+
+.gender-button.active.female .wave-animation {
+    background-color: #e7c7cd;
+}
+
+.gender-button.active.male .wave-animation {
+    background-color: #b0b0e7;
 }

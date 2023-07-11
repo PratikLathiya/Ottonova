@@ -40,7 +40,7 @@ export default function Userform() {
     return (
         <>
             <div className="my-4 container ocean">
-                <div className="container card center shadow p-3 mb-5 bg-body rounded cardstyle">
+                <div className="container card center shadow p-3 mb-5 bg-body rounded">
                     <form className="g-3 needs-validation" ref={formRef} onSubmit={handleSubmit}>
                         <div className="my-3">
                             <label htmlFor="validationCustom01" className="form-label">First name</label>
@@ -63,26 +63,6 @@ export default function Userform() {
                             <label htmlFor="validationCustom02" className="form-label">Mobile No.</label>
                             <input type="number" className="form-control" placeholder='+49 12345678901' value={phone} onChange={handlePhoneChange} required />
                         </div>
-                        {/* <div className="my-3">
-                            <label htmlFor="validationCustomGender" className="form-label">Gender</label>
-                            <div className="row">
-                                <div className="toggle-button-cover">
-                                    <div className="button-cover">
-                                        <div className="button b2" id="button-10">
-                                            <div className="knobs">
-                                                <button className={`gender-button ${isGenderActive ? 'active' : ''}`} style={mystyle} data-mdb-ripple-color="primary" onClick={changeImageSrc}>
-                                                    <img src={imageSrc} alt="" style={{ height: "45px" }} />
-                                                </button>
-                                                <button className={`gender-button ${isGenderActive1 ? 'active' : ''}`} style={mystyle1} data-mdb-ripple-color="danger" onClick={changeImageSrc1}>
-                                                    <img data-mdb-ripple-color="danger" src={imageSrc1} alt="" style={{ height: "45px" }} />
-                                                </button>
-                                            </div>
-                                            <div className="layer"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
                         <div className="gender-switch">
                             <span>Gender:</span>
                             <div className="toggle-button-cover">
@@ -90,7 +70,7 @@ export default function Userform() {
                                     <div className="button b2" id="button-10">
                                         <div className="knobs">
                                             <button
-                                                className={`gender-button ${gender === 'male' ? 'active' : ''}`}
+                                                className={`gender-button ${gender === 'male' ? 'active male' : ''}`}
                                                 onClick={() => handleGenderSelection('male')}
                                             >
                                                 <div className="wave-animation"></div>
@@ -98,7 +78,7 @@ export default function Userform() {
                                             </button>
 
                                             <button
-                                                className={`gender-button ${gender === 'female' ? 'active' : ''}`}
+                                                className={`gender-button ${gender === 'female' ? 'active female' : ''}`}
                                                 onClick={() => handleGenderSelection('female')}
                                             >
                                                 <div className="wave-animation"></div>
