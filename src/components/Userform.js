@@ -120,7 +120,7 @@ export default function Userform() {
                                 onClick={() => handleGenderSelection('male')}
                             >
                                 <div className="wave-animation"></div>
-                                <img src={gender === 'male' ? './activemale.png' : './male.png'} alt="Male" />
+                                <img src={gender === 'male' ? 'activemale.png' : 'male.png'} alt="Male" />
                             </button>
 
                             <button
@@ -128,7 +128,7 @@ export default function Userform() {
                                 onClick={() => handleGenderSelection('female')}
                             >
                                 <div className="wave-animation"></div>
-                                <img src={gender === 'female' ? './activefemale.png' : './female.png'} alt="Female" />
+                                <img src={gender === 'female' ? 'activefemale.png' : 'female.png'} alt="Female" />
                             </button>
                         </div>
                         <div className="col-12 my-3">
